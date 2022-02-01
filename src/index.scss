@@ -130,14 +130,14 @@ html {
 }
 
 @media screen and (max-width: 1440px) {
-  html body .container {
+  html body .App {
     .introWrapper {
       padding-top: 5rem;
       padding-bottom: 2.5rem;
     }
-    .columns .column .field {
+    .column .field {
       .input {
-        width: 70%;
+        width: 40%;
       }
       .button.is-primary {
         width: 40%;
@@ -147,7 +147,7 @@ html {
 }
 
 @media screen and (max-width: 1024px) {
-  html body .container {
+  html body .App {
     .introWrapper {
       padding-top: 3rem;
       padding-bottom: 1.5rem;
@@ -155,13 +155,13 @@ html {
         margin: 1rem;
       }
     }
-    .columns .column {
+    .column {
       padding: 0.5rem;
     }
   }
 }
 @media screen and (max-width: 890px) {
-  html body .container {
+  html body .App {
     .introWrapper {
       padding-top: 2rem;
       padding-bottom: 1rem;
@@ -169,7 +169,7 @@ html {
   }
 }
 @media screen and (max-width: 835px) {
-  html body .container .columns .column .field {
+  html body .App .column .field {
     .input {
       width: 100%;
     }
@@ -186,49 +186,52 @@ html {
 @media screen and (max-width: 768px) {
   html body {
     height: 100%;
-    .container .introWrapper .block .intro__text {
-      margin: 0rem;
-    }
-  }
-}
-.columns {
-  margin: 0rem;
-  margin-top: 0;
-  .column {
-    padding-left: 0rem;
-    &.datetime {
-      padding-top: 2rem;
-    }
-    .field {
-      padding-left: 0;
-      .input {
-        width: 70%;
+    .App .introWrapper {
+      .block .intro__text {
+        margin: 0rem;
       }
-      .button.is-primary {
-        width: 35%;
+      .title {
+        font-size: 3.5rem;
       }
     }
   }
 }
-
+@media screen and (max-width: 667px) {
+  html body .App .introWrapper .title {
+    font-size: 3.25rem;
+  }
+}
 @media screen and (max-width: 635px) {
-  html body .container .introWrapper .block {
+  html body .App .introWrapper .block {
     margin: 1rem;
   }
 }
-
+@media screen and (max-width: 620px) {
+  html body .App .introWrapper .title {
+    font-size: 3rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  html body .App .introWrapper .title {
+    font-size: 2.75rem;
+  }
+}
+@media screen and (max-width: 530px) {
+  html body .App .introWrapper .title {
+    font-size: 2.5rem;
+  }
+}
 @media screen and (max-width: 500px) {
   html body {
     .github-corner svg {
       width: 75px;
       height: 75px;
-
-      .container {
+      .App {
         .introWrapper {
           padding-top: 1.5rem;
           padding-bottom: 0.75rem;
         }
-        .columns .column .field {
+        .column .field {
           .input {
             width: 100%;
           }
@@ -246,46 +249,59 @@ html {
       width: 80px;
       height: 80px;
     }
-    .container .introWrapper .intro.title {
-      text-align: center;
-    }
-  }
-}
-@media screen and (max-width: 360px) {
-  html body .container {
-    .introWrapper {
-      padding-top: 1rem;
-      padding-bottom: 0.5rem;
-    }
-    .columns .column.datetime {
-      padding-top: 1.5rem;
-      .title__date,
-      .title__time {
-        display: none;
-        color: #0000b3;
+    .App .introWrapper {
+      .intro.title {
+        text-align: center;
+        font-size: 2.25rem;
+      }
+      .block .intro__question {
+        font-size: 2rem;
+      }
+      .block .intro__text {
+        font-size: 1.6rem;
       }
     }
-
-    .columns .column .title__date__cal,
-    .columns .column .title__date__clock {
-      display: inline-block;
-      fill: #0000b3;
-    }
   }
-}
-
-@media screen and (max-width: 340px) {
-  html body {
-    .github-corner svg {
-      width: 60px;
-      height: 60px;
-    }
-    .container {
+  @media screen and (max-width: 435px) {
+    html body .App {
       .introWrapper {
-        padding-top: 0.5rem;
-        padding-bottom: 0.25rem;
+        .title {
+          font-size: 1.9rem;
+        }
+        .block .intro__question {
+          font-size: 1.8rem;
+        }
+        .block .intro__text {
+          font-size: 1.5rem;
+        }
       }
-      .columns {
+      .column .field .label {
+        font-size: 1.8rem;
+      }
+    }
+  }
+  @media screen and (max-width: 360px) {
+    html body .App {
+      .introWrapper {
+        padding-top: 1rem;
+        padding-bottom: 0.5rem;
+      }
+      .column.datetime {
+        padding-top: 1.5rem;
+      }
+    }
+  }
+  @media screen and (max-width: 340px) {
+    html body {
+      .github-corner svg {
+        width: 60px;
+        height: 60px;
+      }
+      .App {
+        .introWrapper {
+          padding-top: 0.5rem;
+          padding-bottom: 0.25rem;
+        }
         .column {
           &.form,
           &.datetime {
@@ -298,25 +314,26 @@ html {
         }
       }
     }
-  }
-  @media screen and (max-width: 321px) {
-    html body .container {
-      .introWrapper {
-        .block {
-          .intro__question {
-            font-size: 1.4rem;
+
+    @media screen and (max-width: 321px) {
+      html body .App {
+        .introWrapper {
+          .block {
+            .intro__question {
+              font-size: 1.4rem;
+            }
           }
         }
-      }
-      .columns .column {
-        padding: 0.5rem;
-        &.datetime {
-          .title {
-            font-size: 1.8rem;
-          }
-          .title__date__cal,
-          .title__date__clock {
-            display: inline-block;
+        .column {
+          padding: 0.5rem;
+          &.datetime {
+            .title {
+              font-size: 1.8rem;
+            }
+            .title__date__cal,
+            .title__date__clock {
+              display: inline-block;
+            }
           }
         }
       }
