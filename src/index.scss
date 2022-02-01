@@ -1,0 +1,325 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+
+html {
+  font-size: 62.5%;
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+      "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+      "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Roboto", sans-serif;
+    background-blend-mode: lighten;
+    background-image: url("./image/calendarclock.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-color: rgba(242, 242, 242, 0.8);
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    .github-corner {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .App {
+      width: 80%;
+      margin: 0 auto;
+      .loading {
+        color: #000080;
+        font-size: 2.6rem;
+        font-weight: bold;
+      }
+      .error {
+        color: red;
+        font-size: 2.6rem;
+        font-weight: bold;
+      }
+      .introWrapper {
+        width: 95%;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .title {
+          margin: 0.5rem;
+          color: #000080;
+          font-size: 4rem;
+        }
+        .block {
+          width: 100%;
+          margin: 2rem 1.5rem;
+          .intro__question {
+            color: #000099;
+            font-size: 2.6rem;
+            font-weight: 700;
+          }
+          .intro__text {
+            margin-top: 0.5rem;
+            font-size: 1.8rem;
+          }
+        }
+      }
+
+      .column {
+        padding: 1rem;
+        &.datetime {
+          padding-top: 3.75rem;
+          font-size: 1.3rem;
+        }
+        .title__date,
+        .title__time {
+          color: #0000b3;
+        }
+        .title__date__cal,
+        .title__date__clock {
+          display: none;
+          fill: #0000b3;
+        }
+        .title__date__askedDate,
+        .title__date__askedTime {
+          color: #0000ff;
+        }
+        .field {
+          .label {
+            color: #0000b3;
+            font-size: 2rem;
+          }
+          .input {
+            width: 20%;
+            padding: 1rem 0 1rem 0.25rem;
+            border-radius: 0.5rem;
+            border-width: 0.1rem;
+            border-color: #0000b3;
+            color: #0000b3;
+          }
+          .button.is-primary {
+            width: 20%;
+            padding: 1rem 0 1rem 0rem;
+            border-radius: 0.5rem;
+            border-style: none;
+            display: flex;
+            align-items: stretch;
+            justify-content: center;
+            margin-top: 0.5rem;
+            background-color: #0000b3;
+            font-weight: 500;
+            &:hover {
+              background-color: #0000ff;
+            }
+            .button__text {
+              display: block;
+              font-size: 1.5rem;
+              font-weight: bold;
+              flex-basis: 5rem;
+              color: white;
+            }
+            .button__arrow {
+              display: block;
+              fill: white;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  html body .container {
+    .introWrapper {
+      padding-top: 5rem;
+      padding-bottom: 2.5rem;
+    }
+    .columns .column .field {
+      .input {
+        width: 70%;
+      }
+      .button.is-primary {
+        width: 40%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  html body .container {
+    .introWrapper {
+      padding-top: 3rem;
+      padding-bottom: 1.5rem;
+      .block {
+        margin: 1rem;
+      }
+    }
+    .columns .column {
+      padding: 0.5rem;
+    }
+  }
+}
+@media screen and (max-width: 890px) {
+  html body .container {
+    .introWrapper {
+      padding-top: 2rem;
+      padding-bottom: 1rem;
+    }
+  }
+}
+@media screen and (max-width: 835px) {
+  html body .container .columns .column .field {
+    .input {
+      width: 100%;
+    }
+    .button.is-primary {
+      width: 100%;
+      .button__arrow {
+        display: block;
+        fill: white;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html body {
+    height: 100%;
+    .container .introWrapper .block .intro__text {
+      margin: 0rem;
+    }
+  }
+}
+.columns {
+  margin: 0rem;
+  margin-top: 0;
+  .column {
+    padding-left: 0rem;
+    &.datetime {
+      padding-top: 2rem;
+    }
+    .field {
+      padding-left: 0;
+      .input {
+        width: 70%;
+      }
+      .button.is-primary {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 635px) {
+  html body .container .introWrapper .block {
+    margin: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  html body {
+    .github-corner svg {
+      width: 75px;
+      height: 75px;
+
+      .container {
+        .introWrapper {
+          padding-top: 1.5rem;
+          padding-bottom: 0.75rem;
+        }
+        .columns .column .field {
+          .input {
+            width: 100%;
+          }
+          .button.is-primary {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 495px) {
+  html body {
+    .github-corner svg {
+      width: 80px;
+      height: 80px;
+    }
+    .container .introWrapper .intro.title {
+      text-align: center;
+    }
+  }
+}
+@media screen and (max-width: 360px) {
+  html body .container {
+    .introWrapper {
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    .columns .column.datetime {
+      padding-top: 1.5rem;
+      .title__date,
+      .title__time {
+        display: none;
+        color: #0000b3;
+      }
+    }
+
+    .columns .column .title__date__cal,
+    .columns .column .title__date__clock {
+      display: inline-block;
+      fill: #0000b3;
+    }
+  }
+}
+
+@media screen and (max-width: 340px) {
+  html body {
+    .github-corner svg {
+      width: 60px;
+      height: 60px;
+    }
+    .container {
+      .introWrapper {
+        padding-top: 0.5rem;
+        padding-bottom: 0.25rem;
+      }
+      .columns {
+        .column {
+          &.form,
+          &.datetime {
+            padding: 0.5rem;
+            .title__date__cal,
+            .title__date__clock {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+  @media screen and (max-width: 321px) {
+    html body .container {
+      .introWrapper {
+        .block {
+          .intro__question {
+            font-size: 1.4rem;
+          }
+        }
+      }
+      .columns .column {
+        padding: 0.5rem;
+        &.datetime {
+          .title {
+            font-size: 1.8rem;
+          }
+          .title__date__cal,
+          .title__date__clock {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}
