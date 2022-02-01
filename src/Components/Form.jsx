@@ -40,7 +40,8 @@ const Form = () => {
           <input onChange={(e)=>{setSearchNo(e.target.value)}} onSubmit={(e)=>{e.target.value=""}} className="input" type="number" value={searchNo} placeholder="E.g. 1639219667" min="0" max="253402300799"/>
           </div>
           <div className="control">
-          <button className="button is-primary"><span className="button__text">Convert</span>
+          <button className="button is-primary">
+              <span className="button__text">Convert</span>
           </button>
           </div>
           </form>
