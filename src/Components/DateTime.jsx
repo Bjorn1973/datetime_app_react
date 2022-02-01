@@ -8,17 +8,11 @@ const DateTime = ({data}) => {
           .split("-")
           .reverse()
           .join("-")}</span>
-          {/* <span className="title__date__cal"><svg className="icon icon-calendar">
-      <use xlink:href="#icon-calendar"></use>
-    </svg></span>  */}
-    <span className="title__date__askedDate"></span>
+          <span className="title__date__askedDate"></span>
     </h1>
       <h1 className='title'>
           <span className="title__time">Time: {data.slice(-8)}</span>
-          {/* <span className="title__date__clock"><svg className="icon icon-clock">
-      <use xlink:href=".#icon-clock"></use>
-    </svg></span>  */}
-    <span className="title__date__askedTime"></span>
+          <span className="title__date__askedTime"></span>
     </h1>
     </div>
   </>);

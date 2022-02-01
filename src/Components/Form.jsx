@@ -12,7 +12,6 @@ const Form = () => {
 
     const [searchNo, setSearchNo] = useState(0);
     const [toConvert, setToConvert] = useState(0);
-    console.log(typeof(toConvert))
 
     useEffect(()=>{
         if(toConvert){
@@ -42,13 +41,11 @@ const Form = () => {
           </div>
           <div className="control">
           <button className="button is-primary"><span className="button__text">Convert</span>
-          {/* <span className="button__arrow"><svg class="icon icon-arrow-right2">
-          <use xlink:href="#icon-arrow-right2"></use> */}
-          {/* </svg></span> */}
           </button>
           </div>
           </form>
           </div>
+          
           {loading && <Loading />}
           {error && <Error />}
           {data.length > 0 && <DateTime data={data} />}
